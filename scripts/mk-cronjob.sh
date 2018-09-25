@@ -59,7 +59,7 @@ if ! $DELETE; then
   MIN=$[${RANDOM}%60]
   HOUR=2
   cat >> /etc/crontab <<EOF
-$MIN $HOUR * * * root ansible ${GROUP} -m scripts -a "/usr/local/bin/${FILE}"
+$MIN $HOUR * * * root ansible ${GROUP} -m script -a "/usr/local/bin/${FILE}"
 EOF
   fi
 else
